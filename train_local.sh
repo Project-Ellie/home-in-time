@@ -1,5 +1,5 @@
 export PYTHONPATH=${PYTHONPATH}:${PWD}
-python -m train.task \
+gcloud ml-engine local train --module-name train.task --package-path . -- \
   --eval_steps="10"  \
   --parser_num_threads="16"  \
   --eval_data_pattern="gs://going-tfx/samples/eval_data/atl_june_tfr*"  \
@@ -12,7 +12,7 @@ python -m train.task \
   --log_step_count_steps="200"  \
   --model_dir="gs://going-tfx/samples/model"  \
   --throttle_secs="30"  \
-  --optimizer="sgd"  \
+  --optimizer="adam"  \
   --learning_rate="0.001"  \
   --hypothesis="linear"  \
   --save_summary_steps="100"  \
