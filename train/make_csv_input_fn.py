@@ -1,5 +1,4 @@
 def make_csv_input_fn(filename_pattern, batch_size, options): 
-# batch_size, shuffle_buffer_size=None, distribute=False
 
     import tensorflow as tf
     from train.model_config import ORDERED_TRAINING_DEFAULTS

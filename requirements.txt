@@ -11,3 +11,4 @@ pandas-gbq
 google_compute_engine
 mlflow
 bs4
+snappy
